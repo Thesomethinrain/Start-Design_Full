@@ -1,0 +1,112 @@
+// ImageBox
+
+.imgbox {
+  position: relative;
+  overflow: hidden;
+  //height: 200px;
+  cursor: pointer;
+  img {
+    position: relative;
+  }
+  .caption {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0;
+    ul {
+      position: relative;
+    }
+  }
+  .title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%; /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+  }
+}
+
+.blog .imgbox {
+  img {
+    bottom: 0px;
+    @include transition($vitesse: 0.4s, $effet: ease-out);
+  }
+  .title {
+    @include transition($vitesse: 0.3s, $effet: ease-out);
+    opacity: (1);
+  }
+  .caption {
+    //@include color(rgba($coul-2, 1));
+    top: 100%;
+    //opacity: (0.6);
+    @include transition($vitesse: 0.3s, $effet: ease-out);
+    ul {
+      opacity: (0);
+      @include transition($vitesse: 0.1s, $effet: ease-out);
+    }
+  }
+  &:hover {
+    img {
+      bottom: 30px;
+    }
+    .title {
+      opacity: (0);
+    }
+    .caption {
+      top: 60%;
+      //opacity: (1);
+      @include transition($vitesse: 0.2s, $effet: ease-out);
+      ul {
+        opacity: (1);
+        @include transition($vitesse: 0.5s, $effet: ease-out);
+      }
+    }
+  }
+}
+
+.event .imgbox {
+  img {
+    //@include grayEffect (70%);
+    //@include blurEffect(3px);
+    //@include hueRotateEffect(240deg);
+    //@include invertEffect(0.9);
+    //@include saturate(10);
+    //@include transition($vitesse: 0.4s, $effet: ease-out);
+  }
+  .title {
+    opacity: (0);
+    @include text-shadow();
+    @include transition($vitesse: 0.3s, $effet: ease-out);
+  }
+  .caption {
+    opacity: (0.8);
+    //@include transition($vitesse: 0.3s, $effet: ease-out);
+    ul {
+      top: 50%; /* poussé de la moitié de hauteur du référent */
+      transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+      li {
+      }
+    }
+  }
+  &:hover {
+    img {
+      //@include grayEffect (0);
+      //@include blurEffect(0);
+      //@include hueRotateEffect(40deg);
+      //@include invertEffect(0.8);
+      //@include saturate(5);
+      //@include transition($vitesse: 0.4s, $effet: ease-out);
+    }
+    .title {
+      opacity: (1);
+    }
+    .caption {
+      opacity: (0);
+      //@include transition($vitesse: 0.2s, $effet: ease-out);
+      ul {
+      }
+    }
+  }
+}

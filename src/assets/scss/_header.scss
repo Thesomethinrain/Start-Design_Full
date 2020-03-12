@@ -1,0 +1,11 @@
+#header {
+  text-align: center;
+  @include color(lighten($coul-1, 40%));
+  min-height: $head-height;
+  //background-color: $coul-2;
+  text-align: center;
+}
+#header > h1 {
+  line-height: $head-height;
+  margin: 0;
+}

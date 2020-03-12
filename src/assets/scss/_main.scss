@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Variables
+- Mixin
+- Grid
+- Base Styles
+- Typography
+- Links
+- Header
+- Nav
+- Content
+- Footer
+- Cover
+*/
+
+/* Variables (cf vars.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Mixin (cf mixins.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Grid (cf. _grid.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Typography (cf. /type/type.scss,type-gridlover.scss,skeleton.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: lighten($coul-1, 20%);
+  cursor: pointer;
+  //border-color: $coul-1;
+  text-decoration: none;
+  &:hover {
+    color: lighten($coul-2, 10%);
+    //border-color: $coul-2;
+  }
+  .flatbox,
+  .box,
+  article {
+    &:hover {
+      //background-color: darken($coul-1, 10%);
+    }
+  }
+}
+article > a {
+  //color: inherit;
+}
+/* Body
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+}
+
+/* Header (cf header.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Nav (cf nav.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section {
+  position: relative;
+  min-height: 100vh;
+  //height: 100vh;
+  //padding-top: $padding-l;
+  //padding-bottom: $padding-l;
+  text-align: center;
+}
+.section {
+  padding-top: $padding-l;
+  padding-bottom: $padding-l;
+}
+
+#section-1 {
+}
+#section-2 {
+}
+#section-3 {
+}
+#section-4 {
+}
+
+/* Content-common-helpers
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
+- main helpers
+- color
+- cover
+- text
+- common
+- box
+- Buttons-labels (cf buttons.scss)
+- Infos
+- aside - sidebar
+*/
+
+// main helpers
+
+.lead {
+  padding: 1em;
+  font-family: $font-body;
+  //font-weight: 700;
+  color: $coul-2;
+}
+
+hr {
+  border-top: 1px solid $coul-2;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+ul.inline {
+  list-style: none;
+  li {
+    display: inline-block;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+// color
+
+.primary {
+  @include color($coul-1);
+}
+.minor {
+  @include color($coul-2);
+}
+.third {
+  @include color($coul-3);
+}
+.dark {
+  @include color($coul-dark);
+}
+.white {
+  @include color($coul-white);
+}
+.black {
+  @include color($coul-black);
+}
+.blackfade {
+  @include color(rgba($coul-black, 0.7));
+}
+.whitefade {
+  @include color(rgba($coul-white, 0.5));
+}
+.primaryfade {
+  @include color(rgba($coul-2, 0.7));
+}
+.minorfade {
+  @include color(rgba($coul-1, 0.7));
+}
+.thirdfade {
+  @include color(rgba($coul-3, 0.7));
+}
+
+// cover
+
+.cover-image {
+  @include cover-image("fond_accueil-2019-8.jpg");
+}
+
+.cover-picto {
+  @include cover-image("fond_lettrage-2019-9.gif");
+}
+
+.cover-spectacle {
+  @include cover-image("datas/28-phia-menard.jpg");
+}
+
+// common
+
+// text
+
+.column {
+  columns: 1;
+  column-gap: 1em;
+  //column-rule: 1px solid $coul-2;
+  @include justify();
+  .break {
+    break-after: column;
+  }
+  .span-all {
+    column-span: all;
+  }
+  @media (min-width: $tablet) {
+    columns: 2;
+  }
+  @media (min-width: $laptop) {
+    columns: 3;
+  }
+}
+
+// Buttons-labels (cf buttons.scss)
+
+// Infos
+
+// Main-MainContent
+
+.suzy-content {
+  text-align: left;
+  //border-right: solid $coul-1 1px;
+}
+
+// Aside-Sidebar
+
+aside {
+  text-align: left;
+}
+.last {
+  //border-left: solid $coul-1 1px;
+}
+
+#buy,
+#video,
+#more-date {
+  text-align: center;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  i {
+  }
+}
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img:not([srcset]) {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* Footer (cf footer.scss)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* PAGES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Event Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */

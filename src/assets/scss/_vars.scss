@@ -1,0 +1,86 @@
+// Colors vars
+
+$coul-1: #1eaedb; //rgb(255, 208, 0); //rgb(121, 90, 61);
+$coul-2: #cccabd;
+$coul-3: rgb(65, 64, 58); //rgb(121, 90, 61);
+
+$coul-dark: #202020;
+$coul-black: #000;
+$coul-white: #fff;
+
+// Type vars
+
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kreon:300,400,500,600,700|Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rokkitt:100,200,300,400,500,600,700,800,900|Work+Sans:100,200,300,400,500,600,700,800,900&display=swap");
+
+//font-family: 'Kreon', serif;
+//font-family: 'Montserrat Alternates', sans-serif;
+//font-family: 'Rokkitt', serif;
+//font-family: 'Work Sans', sans-serif;
+
+//$font-title: 'Roboto Slab', serif;
+
+$font-title: "Rokkitt", sans-serif; //'Montserrat Alternates', sans-serif;
+$weight-title: 700; //900;
+$style-title: normal; //italic;
+
+$font-body: "Montserrat Alternates", sans-serif; //'Raleway', sans-serif;
+$weight-body: 200;
+$style-body: normal;
+
+$font-nav: "Rokkitt", sans-serif;
+$weight-nav: 700;
+$style-nav: normal;
+
+$font-button: "Rokkitt", sans-serif;
+$weight-button: 700;
+$style-button: normal;
+
+// Margin-Padding
+
+$margin-s: 0.33em;
+$margin-sm: 0.5em;
+$margin: 1em;
+$margin-l: 2em;
+
+$padding-s: 0.33em;
+$padding-sm: 0.5em;
+$padding-md: 1em;
+$padding-l: 2em;
+
+// Header vars
+$head-height: 100px;
+$head-height-landing: 400px;
+
+// Nav
+$haut-button: 48px;
+$nb-menu: 6;
+
+// Breakpoints
+
+$phone: 480px;
+$tablet: 767px;
+$laptop: 960px;
+$widescreen: 1400px;
+
+// Grid vars
+$gutter: 15px;
+
+// Margin vars
+$mg-lg: 3em;
+$mg-md: $mg-lg/2;
+$mg-sm: $mg-lg/3;
+$mg-xs: $mg-lg/6;
+
+// Padding vars
+$pd-lg: 3em;
+$pd-md: $mg-lg/2;
+$pd-sm: $mg-lg/3;
+$pd-xs: $mg-lg/6;
+
+// Gutter vars
+$gt-lg: 3em;
+$gt-md: $mg-lg/2;
+$gt-sm: $mg-lg/3;
+$gt-xs: $mg-lg/6;

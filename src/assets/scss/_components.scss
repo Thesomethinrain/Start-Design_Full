@@ -1,0 +1,17 @@
+// ribbon
+
+.ribbon {
+  position: absolute;
+  top: 25px;
+  right: -50px;
+  padding: 0;
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  @include rotate(45deg);
+  h5 {
+    color: $coul-white;
+    line-height: 50px;
+    margin-bottom: 0px;
+  }
+}

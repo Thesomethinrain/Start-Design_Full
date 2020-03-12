@@ -1,0 +1,88 @@
+// Icons
+
+.icon-160 {
+  display: inline-block;
+  width: 160px;
+  height: 80px;
+}
+
+// Buttons
+
+.button {
+  @include button();
+}
+
+// Labels
+
+.label-primary {
+  @include label($coul-1);
+}
+.label-minor {
+  @include label($coul-2);
+}
+.label-third {
+  @include label($coul-3);
+}
+.label-white {
+  @include label($coul-white);
+}
+.label-black {
+  @include label(rgba($coul-black, 0.2));
+}
+
+@mixin timeline {
+  position: fixed;
+  z-index: 99;
+  top: 10em;
+  //height: 2em;
+  width: 2em;
+  font-size: 1.8em;
+  text-align: center;
+  background-color: rgba(#000, 0.3);
+  color: rgba(#fff, 0.8);
+  @include transition($vitesse: 100ms);
+  .timeline-content {
+    position: absolute;
+    background-color: rgba(#fff, 0.9);
+    color: #000;
+    width: 20em;
+    //@include rounded(0.5em);
+    opacity: (0);
+    font-size: 0.5em;
+  }
+  &:hover {
+    background-color: $coul-2;
+    color: #fff;
+    @include transition($vitesse: 100ms);
+    .timeline-content {
+      opacity: (1);
+      @include transition($vitesse: 400ms);
+    }
+  }
+}
+.timeline-previous {
+  @include timeline();
+  left: 0em;
+  @include rounded(0 0.5em 0.5em 0);
+  .timeline-content {
+    left: -100em;
+  }
+  &:hover {
+    .timeline-content {
+      left: 5em;
+    }
+  }
+}
+.timeline-next {
+  @include timeline();
+  right: 0em;
+  @include rounded(0.5em 0em 0em 0.5em);
+  .timeline-content {
+    right: -100em;
+  }
+  &:hover {
+    .timeline-content {
+      right: 5em;
+    }
+  }
+}

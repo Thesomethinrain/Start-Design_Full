@@ -1,0 +1,51 @@
+// box
+
+.box,
+.flatbox {
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  header {
+    @include color(rgba($coul-black, 0.5));
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+  main,
+  .inner {
+  }
+  footer {
+    @include color(rgba($coul-black, 0.1));
+    height: auto;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      text-align: left;
+    }
+  }
+}
+.box {
+  @include shadow();
+}
+
+.flatbox {
+  //border: solid rgba($coul-black, 0.5) thin;
+  header {
+    //border-bottom: solid rgba($coul-black, 0.5) thin;
+  }
+  footer {
+    //border-top: solid rgba($coul-black, 0.5) thin;
+  }
+}

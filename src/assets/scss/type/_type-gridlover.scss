@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+//==========================================================================
+
+// 0 - Visual Grid
+// 1 - Font-Style (Custom)
+// 2 - Vertical Rythm (GridLover)
+
+//==========================================================================
+
+//==========================================================================
+// VISUAL GRID.
+//To active please set "$show-grid" to true. Then @extend '%showgrid' to any object containing text.
+//This works best when applied to wrapprs that have no padding of their own.
+//Please note extending this class will overwrite any :after functionality the element has.
+//==========================================================================
+$show-grid: false;
+
+%showgrid {
+  position: relative; //Set placeholder to relative
+  @if $show-grid {
+    &:after {
+      content: "" !important;
+      display: block !important;
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      height: 100% !important;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 170, 255, 0.2) 1px,
+        transparent 1px
+      ) !important;
+      background-repeat: repeat !important;
+      background-size: 100% ($line-height * $font-size) + px !important;
+      background-position: 0 -1px !important;
+      pointer-events: none !important; //Prevent click hijack
+    }
+  }
+}
+.visual-grid {
+  @extend %showgrid;
+  margin: 0;
+  padding: 3opx;
+}
+//Extend classes here or at their normal position
+
+//==========================================================================
+// 1 - Font-Style (Custom)
+//==========================================================================
+
+body {
+  font-family: $font-body;
+  font-weight: $weight-body;
+  font-style: $style-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i {
+  font-family: $font-title;
+}
+
+h1 {
+  font-weight: $weight-title;
+  font-style: $style-title;
+}
+
+h2 {
+  font-weight: 500; //$weight-title;
+  font-style: normal; //italic;//$style-title;
+}
+
+h3 {
+  font-weight: 200; //$weight-title;
+  font-style: normal; //italic;//$style-title;
+}
+
+h4 {
+  font-weight: $weight-title;
+  font-style: $style-title;
+}
+
+h5 {
+  font-weight: 100; //$weight-title;
+  font-style: normal; //italic;//$style-title;
+}
+
+h6 {
+  font-weight: $weight-title;
+  font-style: $style-title;
+}
+.title {
+  //font-family: $font-title;
+  font-weight: 700; //$weight-title;
+  //text-transform: uppercase;
+  font-style: normal; //$style-title;
+}
+
+nav ul > li > a {
+  font-family: $font-nav;
+  font-weight: $weight-nav; //500;
+  font-style: $style-nav; //normal;//$style-title;
+  //text-transform: uppercase;
+}
+
+i {
+  font-family: $font-title;
+  font-weight: $weight-title;
+  font-style: $style-title;
+}
+
+p {
+  a {
+    font-family: $font-title;
+    font-weight: $weight-title;
+    font-style: $style-title;
+  }
+}
+
+p {
+  font-family: $font-body;
+  font-weight: $weight-body;
+  font-style: $style-body;
+}
+
+//==========================================================================
+// 2 - Vertical Rythm (GridLover)
+//==========================================================================
+
+//==========================================================================
+// BASELINE GRID : GridLover SASS - https://codepen.io/metadiv/pen/VaVRja
+//these controllers setup the baseline grid and vertical rhythm for major typography.
+// based on http://gridlover.net
+//==========================================================================
+$font-size: 16; //Sets the base font size (px)
+$line-height: 1.5; //Sets the line Height ratio for base font (Must be >1)
+$scale-factor: 1.2; //Scale factor for headings h1, h3 & h3 sizes. (Must be >1)
+
+//==========================================================================
+// UTILITIES
+// these functions and mixins are used by the baseline grid to make various
+// calculations
+//==========================================================================
+
+//Rem Calulations
+//Converts px to REM
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+//Power of calculations
+//Used for calculating font sizes of headers with amultiplier
+@function pow($number, $exp) {
+  $value: 1;
+  @for $i from 1 through $exp {
+    $value: $value * $number;
+  }
+  @return $value;
+}
+
+//Font-size calculator
+//Calculat font size of an elemnt in both px and rem.
+//Multiplier reflects the ratio to increase type from base by for headings
+@mixin fontSize($scale: 0) {
+  //Get the global properties
+  $fs: $font-size;
+  $lh: $font-size * $line-height;
+
+  //Check if the element has a scale increase applied to it.
+  @if $scale > 0 {
+    // Work out font-size
+    //ex - fs = 4 : scale-factor = 2 : scale = 3
+    // $fs = 4 * (2 * 2 * 2)
+    $fs: $fs * pow($scale-factor, $scale);
+
+    //Work Out line-height
+    //ex lh = 4 : fs = 2
+    // $lh = ( floor( 2 / 4 ) + 1 ) * 4
+    $lh: (floor($fs / $lh) + 1) * $lh;
+  }
+
+  //Set the properties
+  font-size: #{$fs}px; //Fallback in px
+  font-size: calculateRem($fs);
+  line-height: #{$lh}px;
+  line-height: calculateRem($lh);
+}
+
+//Spacing Calculator
+@mixin spacing($prop, $before: false, $after: false) {
+  $space: ceil($font-size * $line-height);
+
+  @if $before {
+    #{$prop}-top: $space + px;
+    #{$prop}-top: calculateRem($space);
+  } @else {
+    #{$prop}-top: 0;
+  }
+  @if $after {
+    #{$prop}-bottom: $space + px;
+    #{$prop}-bottom: calculateRem($space);
+  } @else {
+    #{$prop}-bottom: 0;
+  }
+}
+
+//Text Alignemtn Classes for extending
+.align {
+  &--ltr {
+    text-align: left;
+  }
+  &--rtl {
+    text-align: right;
+  }
+  &--cen {
+    text-align: center;
+  }
+}
+
+//==========================================================================
+/*!	VERTICAL RYTHM	*/
+//Setup the baseline grid and vertical rythm of major type elements
+//==========================================================================
+body {
+  @include fontSize(0);
+}
+h1,
+%h1 {
+  @include fontSize(3);
+  @include spacing("margin", true, false);
+}
+h2,
+%h2 {
+  @include fontSize(2);
+  @include spacing("margin", true, true);
+}
+
+h3,
+%h3 {
+  @include fontSize(1);
+  @include spacing("margin", true, false);
+}
+
+h4,
+h5,
+%h4,
+%h5 {
+  @include fontSize();
+  @include spacing("margin", true, false);
+}
+hgroup,
+.hgroup,
+%hgroup {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+// For use with cross media query @extend mixin
+/*
+@inlcude ph('font-h1') {
+	@include fontSize(3);
+	@include spacing('margin', true, false);
+}
+@inlcude ph('font-h2') {
+	@include fontSize(2);
+	@include spacing('margin', true, true);
+}
+@inlcude ph('font-h3') {
+	@include fontSize(1);
+	@include spacing('margin', true, false);
+}
+@inlcude ph('font-h4') {
+	@include fontSize();
+	@include spacing('margin', true, false);
+}
+*/
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  @include spacing("margin", false, true);
+}
+sup {
+  font-size: 0.6em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.9em;
+}
+sub {
+  bottom: -0.25em;
+}

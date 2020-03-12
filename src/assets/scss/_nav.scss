@@ -1,0 +1,122 @@
+/* Nav Affix
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+  //background-color: rgba($coul-2,1);
+  width: 100%;
+}
+
+nav ul {
+text-align: center;
+margin: 0;
+-webkit-margin-before: 0;
+-webkit-padding-start: 0;
+}
+nav ul>li {
+display: inline-block;
+width: 8em;
+height: ($haut-button)*1;
+line-height: ($haut-button)*1;
+a {
+  color: rgba($coul-black,0.5);
+  &:hover {
+    color: rgba($coul-white,0.8);
+  }
+}
+}
+
+@media (min-width: $tablet) {
+
+#navfix {
+  //background-color: rgba($coul-dark,0.9);
+  border-style: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+#navfix-bottom {
+  background-color: rgba($coul-black,0.1);
+  @include shadow($distance:10px, $taille:0px);
+  position: fixed;
+  z-index:1000;    
+  height: ($haut-button)*1;
+  bottom: 0;
+  a {
+    color: darken($coul-2,10%);
+    &:hover {
+      color: lighten($coul-2,10%);
+    }
+  }
+}
+
+#navfix.affix, #navfix-bottom.affix {
+  background-color: rgba($coul-white,0.7); 
+  @include shadow($distance:2px, $taille:2px);
+  position: fixed;
+  width: 100%;
+  z-index:10;
+  top: 0;  
+  a {
+    color: darken($coul-2,30%);
+    &:hover {
+      color: lighten($coul-2,10%);
+    }
+  }
+}
+}
+
+/* Nav Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+body {
+transition-duration:0.3s;
+}
+
+
+#burger {
+display: none;
+background-color: $coul-white;
+width: 100%;
+text-align: center;
+height: ($haut-button)*1;
+line-height: ($haut-button)*1;
+
+}
+
+@media (max-width:$tablet) {
+#burger {
+  display: block;
+}
+
+nav{
+  position: absolute;
+  width: 100%;
+  top: ($haut-button * -$nb-menu);
+  background-color: $coul-2;
+}
+nav {
+  ul{
+    padding: 0;
+    li {
+      width: 100%;
+      a {
+        display: block;
+        text-align: center;
+        height: $haut-button;
+        line-height: $haut-button;
+        //background-color: rgba($coul-white,0.9);
+        &:hover {
+          background-color: $coul-1;
+          color: $coul-white;
+        }
+      }
+    }
+  }
+}
+
+.navOpen {
+  transform:translateY($haut-button * $nb-menu);
+}
+
+
+}

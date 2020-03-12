@@ -1,0 +1,82 @@
+// Row
+
+.row {
+  margin: $margin 0;
+}
+
+// Article
+
+article {
+  margin-top: 0;
+  margin-bottom: $margin; // cf Masonry gutter params in js file
+}
+
+// Box
+
+.box,
+.flatbox {
+  header {
+    padding: $padding-sm;
+  }
+  main,
+  .inner {
+    padding: $padding-l;
+  }
+  footer {
+    padding: $padding-sm;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+}
+
+// ImgBox
+
+.imgbox {
+  padding: 0;
+  main,
+  .inner {
+    padding: $padding-md;
+  }
+  .caption {
+    padding: $padding-md;
+  }
+}
+
+// Timeline
+
+.timeline-content {
+  padding: $padding-sm;
+}
+
+// Button
+
+@mixin button-padding-margin {
+  padding: $padding-s/2 $padding-sm 0 $padding-sm;
+  margin: 0 $margin-s 0 0;
+}
+
+// Header
+
+#header > h1 {
+  line-height: $head-height;
+  margin-top: 0;
+}
+
+// Aside/-Content
+
+.last {
+  //padding-left: $padding-md;
+}
+
+// Footer
+
+#footer {
+  padding-top: $padding-l;
+}

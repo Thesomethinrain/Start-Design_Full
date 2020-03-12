@@ -1,0 +1,12 @@
+#footer {
+  position: relative;
+  height: 100vh;
+  ul {
+    list-style: none;
+    @media (min-width: $tablet) {
+      text-align: left;
+    }
+  }
+  a {
+  }
+}

@@ -1,0 +1,79 @@
+// Center
+
+.center {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+.center-h {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Margin
+
+.mg-s {
+  margin: $margin-s;
+}
+
+.mg-sm {
+  margin: $margin-sm;
+}
+
+.mg-md {
+  margin: $margin;
+}
+
+.mg-l {
+  margin: $margin-l;
+}
+// Margin Top
+.mgt-s {
+  margin-top: $margin-s;
+}
+.mgt-sm {
+  margin-top: $margin-sm;
+}
+.mgt-md {
+  margin-top: $margin;
+}
+.mgt-l {
+  margin-top: $margin-l;
+}
+
+// Margin Bottom
+.mgb-s {
+  margin-bottom: $margin-s;
+}
+.mgb-sm {
+  margin-bottom: $margin-sm;
+}
+.mgb-md {
+  margin-bottom: $margin;
+}
+.mgb-l {
+  margin-bottom: $margin-l;
+}
+
+// Padding
+.padding-s {
+  padding: $padding-s;
+}
+.padding-sm {
+  padding: $padding-sm;
+}
+.padding-md {
+  padding: $padding-md;
+}
+.padding-l {
+  padding: $padding-l;
+}

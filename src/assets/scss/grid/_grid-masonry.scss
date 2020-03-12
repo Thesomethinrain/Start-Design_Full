@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Masonry
+------------------------------------*/
+
+// MobilFirst
+
+.masonry-container {
+  margin: 0 auto;
+  width: 100%;
+  article {
+    width: 100%;
+  }
+}
+
+/* Widescreen (e.g. 1400 et +) */
+@media only screen and (min-width: ($widescreen)+1px) {
+  .masonry-container {
+    //width: container(1285px); // with Susy
+    width: ($widescreen)-115px; //(e.g. 1285px)
+    article {
+      width: ((($widescreen)-115px)- ($gutter * 3))/4;
+      //width: 310px;
+    }
+  }
+  /*
+  .article-2col {
+    width: ((($widescreen)-115px)- ($gutter))/2;
+    //width: 635px;
+  }
+
+  .grid-item--w2 {
+    width: ((($widescreen)-115px)- ($gutter))/2;
+    //width: 635px;
+  }
+  */
+}
+
+/* Laptop (e.g. 960-1400px) */
+@media only screen and (min-width: $laptop) and (max-width: $widescreen) {
+  .masonry-container {
+    //width: container(960px); // with Susy
+    width: $laptop; //(e.g. 960px)
+    article {
+      width: (($laptop)- ($gutter * 2))/3;
+      //width: 310px;
+    }
+  }
+  /*
+  .grid-item-2col {
+    width: (($laptop)- ($gutter))/2;
+    //width: 472px;
+  }
+
+  .grid-item--w2 {
+    width: ((($laptop)- ($gutter * 2))/3) * 2 + $gutter;
+    //width: 635px;
+  }
+  */
+}
+/* Tablet - Landscape (e.g. 768-959px) */
+@media only screen and (min-width: $tablet) and (max-width: ($laptop)-1px) {
+  .masonry-container {
+    //width: container(768px); // with Susy
+    width: $tablet;
+    article {
+      width: (($tablet)- ($gutter))/2;
+      //width: (376px);
+    }
+  }
+
+  /*
+  .grid-item--w1,
+  .grid-item--w2,
+  .grid-item-2col {
+    width: (($tablet)- ($gutter))/2;
+    //width: (376px);
+  }
+  */
+}
+
+/* Tablet - Portrait (e.g. 480-767px) */
+@media only screen and (min-width: $phone) and (max-width: ($tablet)-1px) {
+  .masonry-container {
+    //width: container(90%); // with Susy
+    width: 90%;
+  }
+}
+
+/* Phone (e.g. 479px) */
+@media only screen and (max-width: ($phone)-1px) {
+}

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Susy
+------------------------------------ */
+
+$susy: (
+  //container: 960px,
+    columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  //gutter-position: inside,
+    //debug: (image: show-columns)
+);
+
+@include border-box-sizing;
+
+.suzy-container-full {
+  width: container(97%);
+}
+
+.suzy-container {
+  @include container();
+  //width:container(80%);
+
+  .suzy-gallery > article {
+    margin-top: 15px;
+  }
+
+  .row {
+    @include break;
+  }
+}
+
+/* Widescreen (e.g. 1400 et +) */
+@media only screen and (min-width: ($widescreen)+1px) {
+  .suzy-container {
+    width: container($widescreen);
+  }
+  .suzy-content {
+    @include span(8 of 10);
+  }
+  .suzy-aside {
+    @include span(2 of 10);
+  }
+
+  .suzy-gallery > article {
+    @include gallery(3 of 12);
+    main {
+      height: 300px;
+      overflow: scroll;
+    }
+  }
+}
+
+/* Laptop (e.g. 960-1400px) */
+@media only screen and (min-width: $laptop) and (max-width: $widescreen) {
+  .suzy-container {
+    width: container($laptop);
+  }
+  .suzy-content {
+    @include span(8 of 12);
+  }
+  .suzy-aside {
+    @include span(4 of 12);
+  }
+
+  .suzy-gallery > article,
+  .suzy-gallery > .article {
+    @include gallery(4 of 12);
+    //height: 300px;
+    main {
+      height: 300px;
+      overflow: scroll;
+    }
+  }
+}
+/* Tablet - Landscape (e.g. 768-959px) */
+@media only screen and (min-width: $tablet) and (max-width: ($laptop)-1px) {
+  .suzy-container {
+    width: container(95%);
+  }
+
+  .suzy-content {
+    @include span(8 of 10);
+  }
+  .susy-aside {
+    @include span(2 of 10);
+  }
+
+  .suzy-gallery > article {
+    @include gallery(6 of 12);
+    main {
+      height: 400px;
+      overflow: scroll;
+    }
+  }
+}
+
+/* Tablet - Portrait (e.g. 480-767px) */
+@media only screen and (min-width: $phone) and (max-width: ($tablet)-1px) {
+  .suzy-container {
+    width: container(95%);
+  }
+  .suzy-aside div {
+    margin-top: 1em;
+    @include span(6 of 12);
+    @include last();
+  }
+
+  .suzy-gallery > article {
+  }
+}
+
+/* Phone (e.g. 479px) */
+@media only screen and (max-width: ($phone)-1px) {
+}
+
+.last {
+  @include last;
+}
+
+.suzy-cols-2 article {
+  @include span(6 of 12);
+  &:nth-child(2) {
+    @include last();
+  }
+}
+
+.suzy-cols-3 article {
+  @include span(4 of 12);
+  &:nth-child(3) {
+    @include last();
+  }
+}

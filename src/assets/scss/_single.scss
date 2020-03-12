@@ -1,0 +1,30 @@
+#single-header {
+  //@include bg-image("datas/38-blindsuns.jpg");
+  color: #fff;
+  height: $head-height-landing;
+  overflow: hidden;
+  text-align: center;
+  h1 {
+    line-height: $head-height-landing;
+    @include text-shadow();
+  }
+}
+
+@media (min-width: $laptop) {
+  #single-header {
+    height: 100vh;
+  }
+  .singlebox {
+    @include color(rgba($coul-1, 0.7));
+    overflow: auto;
+    position: absolute;
+    text-align: left;
+    margin: 0 auto;
+    width: 960px;
+    height: 80%;
+    margin-left: 50%;
+    left: -480px;
+    top: 50%; /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+  }
+}

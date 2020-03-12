@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* Flexbox
+------------------------------------
+*/
+section,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article,
+.grid-item {
+  flex: 1;
+}

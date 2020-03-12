@@ -1,0 +1,215 @@
+---
+layout: default.hbs
+title: Home
+---
+
+
+{{>nav addId='-bottom'}}
+{{!>nav}}
+
+<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<section id="section-1" class="cover-image">
+    <main class="center">
+        <div class="suzy-container">
+            <div class="">
+                {{>logo color="#FFF"}}
+                <!--<img src="assets/images/logo-serge.png"
+            srcset="assets/images/logo-serge-320.png 320w,
+                    assets/images/logo-serge.png 1920w"
+            width="" height="" alt="">-->
+
+                <!--<h3>Serge Crampon</h3>
+          <h4>Artiste Plasticien</h4>-->
+                <p><a class="link-down icon-160" href="#section-2">{{>icon-actu}}</a><a class="link-down icon-160"
+                        href="#section-5">{{>icon-reperes}}</a></p>
+            </div>
+            <div class="link bottom">
+                <a class="link-down" href="#section-2">
+                    {{>link-down color="#FFF"}}
+                </a>
+            </div>
+
+        </div>
+    </main>
+</section>
+
+<section id="section-2" class="dark blog-content">
+    <article class="suzy-article">
+        <h3>Actu</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ratione odio soluta harum commodi.
+            Reprehenderit
+            incidunt facilis ut esse laudantium, ipsa ullam, ea nam iste voluptas quae! Rerum, optio aliquid.</p>
+    </article>
+    <main class="masonry-container grid-masonry">
+
+        {{>template-actu}}
+        <div class="grid-item grid-item--w2">
+
+            <div class="">
+                <div class="box minor">
+                    <header>
+                        <h4>Agenda</h4>
+                    </header>
+                    <main>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i> 8.11.2019 - <span>Acoustic Power</span></li>
+                            <li><i class="fa fa-calendar"></i> 8.11.2019 - <span>Acoustic Power</span></li>
+                            <li><i class="fa fa-calendar"></i> 8.11.2019 - <span>Acoustic Power</span></li>
+                            <li><i class="fa fa-calendar"></i> 8.11.2019 - <span>Acoustic Power</span></li>
+                            <li><i class="fa fa-calendar"></i> 8.11.2019 - <span>Acoustic Power</span></li>
+                        </ul>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+
+        {{>template-musique image="33-salam.jpg"}}
+        {{>template-theatre image="63-acoustic-power.jpg"}}
+        {{>template-musique image="65-boutelis.jpg"}}
+        {{>template-musique image="38-blindsuns.jpg"}}
+        {{>template-theatre image="67-candide.jpg"}}
+        {{>template-musique image="63-acoustic-power.jpg"}}
+
+
+
+
+
+        <article>
+            <a href="/blog.html">
+                <div id="more-date" class="box minor">
+                    <main>
+                        <i class="far fa-plus-circle fa-6x"></i>
+                        <h5>
+                            Plus de dates
+                        </h5>
+                    </main>
+                </div>
+            </a>
+        </article>
+    </main>
+</section>
+
+<!-- 
+  
+  ///////////////
+      WORKS 
+  //////////////
+
+-->
+
+
+<section id="section-3" class="blog-content">
+    <h3>Travaux</h3>
+
+    <main class="masonry-container grid-masonry">
+        {{>template-musique image="46-amadani.jpg"}}
+        {{>template-musique image="67-candide.jpg"}}
+        {{>template-musique image="65-boutelis.jpg"}}
+        {{>template-musique image="63-acoustic-power.jpg"}}
+        {{>template-musique image="57-miserables.jpg"}}
+        {{>template-musique image="46-amadani.jpg"}}
+        {{>template-musique image="38-blindsuns.jpg"}}
+        {{>template-musique image="33-salam.jpg"}}
+        {{>template-musique image="28-phia-menard.jpg"}}
+    </main>
+</section>
+<section id="section-4" class="cover-image">
+    <main class="center">
+        <div class="suzy-container">
+            <article>Lorem ipsum dolor sit amet.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, mollitia?</article>
+            <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</article>
+        </div>
+    </main>
+</section>
+<section id="section-5" class="">
+    <main class="masonry-container grid-masonry">
+
+        <article>
+            <a href="">
+                <div class="flatbox">
+                    <img src="assets/images/icon-acabotin.svg" alt="">
+                </div>
+            </a>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-jtempo.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-acabotin.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-ccroissants.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-ces.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-chaosmatic.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-cob.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-expos.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-jeunepublic.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-leszecs.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-spectacles.svg" alt="">
+            </div>
+        </article>
+
+        <article>
+            <div class="flatbox">
+                <img src="assets/images/icon-voisinages.svg" alt="">
+            </div>
+        </article>
+
+
+    </main>
+
+    <div class="link">
+        <a href="#section-1" class="link-up">{{>link-up color="#000"}}</a>
+    </div>
+
+</section>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
