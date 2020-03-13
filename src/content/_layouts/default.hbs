@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -24,9 +25,9 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
 
-<!-- bower:css -->
+  <!-- bower:css
 <link rel="stylesheet" href="../../../bower_components/fancybox/dist/jquery.fancybox.min.css" />
-<!-- endbower -->
+endbower -->
 
 
   <!-- Favicon
@@ -34,64 +35,73 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 
-<style>
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000; /* change if the mask should have another color then white */
-  z-index: 9999; /* makes sure it stays on top */
-}
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%; /* centers the loading animation horizontally one the screen */
-  top: 50%; /* centers the loading animation vertically one the screen */
-  background-image: url(assets/images/components/cieloba-load.gif); /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px; /* is width and height divided by two */
-}
-</style>
+  <style>
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000;
+      /* change if the mask should have another color then white */
+      z-index: 9999;
+      /* makes sure it stays on top */
+    }
+
+    #status {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      /* centers the loading animation horizontally one the screen */
+      top: 50%;
+      /* centers the loading animation vertically one the screen */
+      background-image: url(assets/images/components/cieloba-load.gif);
+      /* path to your loading animation */
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: -100px 0 0 -100px;
+      /* is width and height divided by two */
+    }
+  </style>
 
 
 
 </head>
+
 <body>
-<div class="{{ lowercase title }}" id="wrap">
-<!-- Preloader
+  <div class="{{ lowercase title }}" id="wrap">
+    <!-- Preloader
 <div id="preloader">
   <div id="status">&nbsp;</div>
 </div>
  -->
-        {{> body }}
-</div>
+    {{> body }}
+  </div>
 
-        {{> footer }}
-
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/lib/jquery.js"><\/script>')</script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/lib/jquery.easing.1.3.js"><\/script>')</script>
-<script type="text/javascript" src="assets/js/lib/isotope.pkgd.min.js"></script>
-<!--<script type="text/javascript" src="assets/js/lib/masonry.pkgd.min.js"></script>-->
-<script type="text/javascript" src="assets/js/lib/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="assets/js/lib/jquery.fancybox.min.js"></script>
-
-<!--<script src="https://use.fontawesome.com/c3b1c44f29.js"></script>-->
+  {{> footer }}
 
 
-<script type="text/javascript" src="assets/js/global.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/lib/jquery.js"><\/script>')</script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/lib/jquery.easing.1.3.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/js/lib/isotope.pkgd.min.js"></script>
+  <!--<script type="text/javascript" src="assets/js/lib/masonry.pkgd.min.js"></script>-->
+  <script type="text/javascript" src="assets/js/lib/jquery.parallax-1.1.3.js"></script>
+  <script type="text/javascript" src="assets/js/lib/jquery.fancybox.min.js"></script>
+
+  <!--<script src="https://use.fontawesome.com/c3b1c44f29.js"></script>-->
 
 
-<!-- bower:js -->
+  <script type="text/javascript" src="assets/js/global.js"></script>
+
+
+  <!-- bower:js
 <script src="../../../bower_components/jquery/dist/jquery.js"></script>
 <script src="../../../bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
-<!-- endbower -->
+endbower -->
 
 </body>
+
 </html>
