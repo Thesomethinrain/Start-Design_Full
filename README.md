@@ -27,8 +27,10 @@ Installez les paquets Node:
 
 Lancez Grunt :
 
-- grunt dist
-- grunt
+```
+grunt dist
+grunt
+```
 
 Admirez votre site sur http://localhost:3000
 Editez les fichiers :
