@@ -7,8 +7,8 @@ StartDesignFull est un thème front-end HTML5 conçu par [Sebastien Pasquier](ht
 ## Contenu
 
 - **Grille de mise en page** -
-  - adaptée aux tablettes et smartphones
-  - 3 systèmes possibles au choix : Flexbox, Susy, Masonry
+  _ adaptée aux tablettes et smartphones
+  _ 3 systèmes possibles au choix : Flexbox, Susy, Masonry
 - **SCSS** - inclue les styles de base, les variables pour la configuration générale, et des mixins pour une automatisation des styles courants.
 - **Vertical Rythm** - avec Gridlover, Skeleton ou Compass (au choix)
 - **Generateur de site statique** - Avec [Assemble](https://github.com/assemble/assemble) permettant de générer rapidement un site prêt à mettre en ligne.
@@ -26,8 +26,9 @@ Installez les paquets Node:
     npm install
 
 Lancez Grunt :
-grunt dist
-grunt
+
+- grunt dist
+- grunt
 
 Admirez votre site sur http://localhost:3000
 Editez les fichiers :
@@ -42,14 +43,14 @@ Voici les fichiers principaux ci-dessous :
 
 - \_site - version compilée statique du site web prêt à déployer
 - src/
-  - assets - Sources
-  - |- images - Images
-  - |- js - Fichiers JavaScript
-  - |- fonts - Fontes
-  - |- scss - Fichiers Scss
-  - content - Calques pour la génération du site statique
-  - |- \_includes - Composants (header, footer, modal, box,…)
-  - |- \_layouts - Gabarits (Default) \* |- \_pages - Pages du site (Index, Blog, Single,…)
+  _ assets - Sources
+  _ |- images - Images
+  _ |- js - Fichiers JavaScript
+  _ |- fonts - Fontes
+  _ |- scss - Fichiers Scss
+  _ content - Calques pour la génération du site statique
+  _ |- \_includes - Composants (header, footer, modal, box,…)
+  _ |- \_layouts - Gabarits (Default) \* |- \_pages - Pages du site (Index, Blog, Single,…)
 - Gruntfile.js - Pour la compilation et l’automatisation des tâches
 - package.json - Pour l’installation des paquets Node
 - .gitignore - Pour l’exclusion de fichiers des dépôts Git
