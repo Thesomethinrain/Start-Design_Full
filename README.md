@@ -26,8 +26,10 @@ Installez les paquets Node:
 
 Lancez Grunt :
 	
-- grunt dist
-- grunt
+```
+grunt dist
+grunt
+```
 
 Admirez votre site sur http://localhost:3000
 Editez les fichiers :
@@ -46,7 +48,7 @@ Voici les fichiers principaux ci-dessous :
 		* |- js			- Fichiers JavaScript
 		* |- fonts		- Fontes
 		* |- scss		- Fichiers Scss
-	  * content 			- Calques pour la génération du site statique
+	* content 			- Calques pour la génération du site statique
 		* |- _includes 	- Composants  (header, footer, modal, box,…)
 		* |- _layouts	- Gabarits (Default)
 		* |- _pages	- Pages du site (Index, Blog, Single,…)
